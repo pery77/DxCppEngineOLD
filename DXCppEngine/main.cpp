@@ -8,17 +8,21 @@
 
 int main()
 {
+	printf("Init application.\n");
 	try
 	{
 		AppWindow app;
+		if (app.isRun()) printf("Application is runing.\n");
+		
 		while (app.isRun())
 		{
 			app.broadcast();
 		}
+		
 	}
 	catch ( const std::runtime_error& err)
 	{
-		MessageBox(nullptr, err.what(), "Error initializanding app.", MB_OK);
+		printf("Application fail.\n");
 	}
 
 	return 0;
