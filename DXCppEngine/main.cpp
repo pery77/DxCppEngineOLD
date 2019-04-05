@@ -4,7 +4,6 @@
 #include "AppWindow.h"
 #include <stdexcept>
 
-
 int main()
 {
 	try
