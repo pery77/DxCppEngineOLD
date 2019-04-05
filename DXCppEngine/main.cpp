@@ -1,5 +1,7 @@
-//Hide console window
+//Hide console window in Release mode
+#ifdef NDEBUG
 #pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
+#endif
 
 #include "AppWindow.h"
 #include <stdexcept>
